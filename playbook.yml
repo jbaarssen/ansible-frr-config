@@ -3,6 +3,12 @@
   hosts: localhost
   become: yes
   tasks:
+    - name: Ensure bgpd is enabled in /etc/frr/daemons
+      lineinfile:
+        path: /etc/frr/daemons
+        regexp: '^bgpd='
+        line: 'bgpd=yes'
+  
     - name: Create FRR BGP config
       copy:
         dest: /etc/frr/frr.conf
