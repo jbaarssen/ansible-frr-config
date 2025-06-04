@@ -26,6 +26,7 @@
             neighbor 10.3.0.12 ebgp-multihop 5
             neighbor 10.3.0.12 update-source eth0
             network 8.8.8.8/32
+            redistribute connected
           !
           line vty
             exec-timeout 0 0
