@@ -30,6 +30,7 @@
 
           router bgp 65020
             bgp router-id 172.16.2.4
+            bgp install
             no bgp ebgp-requires-policy
             neighbor 10.3.0.12 remote-as 65515
             neighbor 10.3.0.12 ebgp-multihop 5
