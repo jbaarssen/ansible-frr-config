@@ -26,6 +26,7 @@
           hostname nva
           service integrated-vtysh-config
           log syslog
+          ip forwarding
 
           router bgp 65020
             bgp router-id 172.16.2.4
