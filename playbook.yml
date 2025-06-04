@@ -3,6 +3,10 @@
   hosts: localhost
   become: yes
   tasks:
+    - name: Add static route to loopback for 8.8.8.8/32
+      command: ip route add 8.8.8.8/32 dev lo
+      ignore_errors: true
+  
     - name: Ensure bgpd is enabled in /etc/frr/daemons
       lineinfile:
         path: /etc/frr/daemons
