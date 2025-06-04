@@ -33,6 +33,7 @@
             neighbor 10.3.0.12 remote-as 65515
             neighbor 10.3.0.12 ebgp-multihop 5
             neighbor 10.3.0.12 update-source eth0
+            neighbor 10.3.0.12 soft-reconfiguration inbound
             network 8.8.8.8/32
             network 172.16.1.0/24
             redistribute connected
